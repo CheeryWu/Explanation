@@ -13,7 +13,7 @@ function displayAccesskeys() {
   for (var i = 0; i<links.length; i++) {
     var current_link = links[i];
     // 如果没有accesskey属性，继续循环
-    if (current_link.getAttribute("accesskey")) continue;
+    if (!current_link.getAttribute("accesskey")) continue;
     // 获取accesskey的值
     var key = current_link.getAttribute("accesskey");
     // 获取链接文本
